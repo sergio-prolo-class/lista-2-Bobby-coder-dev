@@ -12,11 +12,23 @@ public class App {
         draw.setXscale(0, 1000);
         draw.setYscale(0, 600);
 
-        Grade grade = new Grade(100, 100);
-        grade.desenhar(draw);
+        Navio navios[] = new Navio[5];
+        
+        navios[0] = new Navio(4, 0, 0, "horizontal", 1);
+        navios[0].desenhar(draw);
+        navios[1] = new Navio(5, 3, 2, "vertical", 1);
+        navios[1].desenhar(draw);
+        navios[2] = new Navio(3, 5, 1, "vertical", 1);
+        navios[2].desenhar(draw);
+        navios[3] = new Navio(3, 7, 5, "vertical", 1);
+        navios[3].desenhar(draw);
+        navios[4] = new Navio(2, 1, 8, "horizontal", 1);
+        navios[4].desenhar(draw);
 
-        Navio navio1 = new Navio(4, 4, 6, "horizontal");
-        navio1.desenhar(draw);
+        Grade grade = new Grade(50, 100);
+        grade.desenhar(draw);
+        Grade grade2 = new Grade(550, 100); //+400 por conta ja ter uma grade e mais 100 por espaçamento
+        grade2.desenhar(draw);
 
         draw.show();
         

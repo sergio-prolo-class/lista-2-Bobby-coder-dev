@@ -6,21 +6,23 @@ public class Navio {
     private int tamanho;
     private int x;
     private int y;
+    private int grade;
     private boolean vertical; 
 
-    public Navio(int tamanho, int x, int y, String orientacao) {
+    public Navio(int tamanho, int x, int y, String orientacao, int grade) {
         this.tamanho = tamanho;
         this.x = x;
         this.y = y;
+        this.grade = grade;
         this.vertical = orientacao.equals("vertical");
     }
 
     public void desenhar(Draw draw) {
         //acertar centro inicial
-        double xCentro = (40 * x) + 120; 
-        double yCentro = (40 * y) + 120;
+        double xCentro = (grade == 1 ? 70 : 570) + (40 * x); 
+        double yCentro = (grade == 1 ? 120 : 620) + (40 * y);
         for (int i = 0; i < tamanho; i++) {
-            draw.setPenColor(Color.RED);
+            draw.setPenColor(Draw.BOOK_RED);
             draw.filledSquare(xCentro, yCentro, 20); //desenha o quadrado   
 
              if (vertical) {
@@ -29,5 +31,6 @@ public class Navio {
                 xCentro += 40; // Se for horizontal, vai para a direita
             }
         }
+        draw.setPenColor();
     }
 }

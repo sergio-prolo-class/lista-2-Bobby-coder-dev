@@ -24,14 +24,18 @@ public class Grade {
         //linhas horizontais
         for (int i = 0; i <= linhas; i++) {
             double yAtual = y + i * alturaCelula; // para ir subindo as linhas
+            draw.setPenColor(Draw.BOOK_RED);
             if (i != linhas) draw.text(x - 20, yAtual + 20, String.format("%c", 'A' + i)); // Cordenadas horizontais
+            draw.setPenColor();
             draw.line(x, yAtual, x + colunas * larguraCelula, yAtual);
         }
 
         //linhas verticais
         for (int i = 0; i <= colunas; i++) {
             double xAtual = x + i * larguraCelula; // para ir para a direita 
+            draw.setPenColor(Draw.BOOK_RED);
             if (i != linhas) draw.text(xAtual + 20, y - 20, String.valueOf(i)); // Cordenadas verticais
+            draw.setPenColor();
             draw.line(xAtual, y, xAtual, y + linhas * alturaCelula);
         }
     }

@@ -77,7 +77,7 @@ public class App {
 ## Dependências
 
 - **Biblioteca `algs4`**: 
-  - Certifique-se de incluir o arquivo `algs4.jar` no classpath do seu projeto para utilizar a funcionalidade gráfica.
+  - Certifique-se de incluir o arquivo `algs4.jar` no classpath do projeto para utilizar a funcionalidade gráfica.
 
 ## Como Executar
 
